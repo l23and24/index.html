@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Самостійна робота  - Варіант 3</title>
+    <title>Самостійна робота - Варіант 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        body { background-color: #f8fafc; font-family: sans-serif; }
+        body { background-color: #f8fafc; font-family: sans-serif; font-size: 16px; }
         .question-card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: transform 0.2s; }
         .question-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .badge { background: #eff6ff; color: #1e40af; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+        .badge { background: #eff6ff; color: #1e40af; padding: 2px 10px; border-radius: 20px; font-size: 0.875rem; font-weight: 700; }
         .drawing-box { border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px; }
         img.drawing { max-width: 100%; max-height: 180px; object-fit: contain; }
+        /* Уніфікація шрифтів для всіх елементів */
+        p, label, span, textarea { font-size: 1rem !important; line-height: 1.5; }
+        h1 { font-size: 1.875rem !important; }
+        h3 { font-size: 1.125rem !important; }
     </style>
 </head>
 <body class="py-10 px-4">
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
         <header class="text-center mb-10">
-            <h1 class="text-2xl md:text-3xl font-bold text-blue-700 mb-2">Самостійна робота № 10</h1>
+            <h1 class="font-bold text-blue-700 mb-2">Самостійна робота № 10</h1>
             <p class="text-gray-600 italic mb-4">Тема: «Електричний заряд. Закон збереження електричного заряду. Електричне поле. Механізм електризації. Електроскоп. Закон Кулона»</p>
             <div class="inline-block bg-blue-600 text-white px-8 py-1.5 rounded-full font-bold shadow-md">1 варіант</div>
         </header>
@@ -37,7 +41,7 @@
                         <span class="badge">0,5 бали</span>
                     </div>
                     <p class="text-slate-700 mb-4 font-medium">Вкажіть заряд, що виникає на скляній паличці при натиранні її шовком?</p>
-                    <div class="grid grid-cols-2 gap-2 text-sm">
+                    <div class="grid grid-cols-1 gap-2">
                         <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-100">
                             <input type="radio" name="q1" value="a"> <span>а) негативний</span>
                         </label>
@@ -60,7 +64,7 @@
                         <span class="badge">0,5 бали</span>
                     </div>
                     <p class="text-slate-700 mb-4 font-medium">Вкажіть характер взаємодії однойменних заряджених тіл:</p>
-                    <div class="space-y-1 text-sm">
+                    <div class="space-y-1">
                         <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer">
                             <input type="radio" name="q2" value="a"> <span>а) не взаємодіють</span>
                         </label>
@@ -70,7 +74,7 @@
                         <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer">
                             <input type="radio" name="q2" value="v"> <span>в) відштовхуються</span>
                         </label>
-                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer text-[11px]">
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer">
                             <input type="radio" name="q2" value="g"> <span>г) можуть і притягуватися, і відштовхуватися</span>
                         </label>
                     </div>
@@ -85,7 +89,7 @@
                                 <span class="badge">0,5 бали</span>
                             </div>
                             <p class="text-slate-700 mb-4 font-medium italic">Негативно зарядженою паличкою торкнулися стрижня електроскопа (див. рисунок). Як був заряджений електроскоп?</p>
-                            <div class="space-y-2 text-sm">
+                            <div class="space-y-2">
                                 <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-slate-100">
                                     <input type="radio" name="q3" value="a"> <span>а) негативно</span>
                                 </label>
@@ -153,9 +157,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Q5 -->
                 <div class="question-card p-6 border-t-4 border-emerald-500">
-                    <span class="badge mb-3 block w-fit">1 бал</span>
-                    <p class="text-sm font-bold text-slate-700 mb-4">Вкажіть запис закону збереження заряду:</p>
-                    <div class="space-y-3 text-[13px]">
+                    <div class="mb-3"><span class="badge">1 бал</span></div>
+                    <p class="font-bold text-slate-700 mb-4">Вкажіть запис закону збереження заряду:</p>
+                    <div class="space-y-3">
                         <label class="flex items-center space-x-2 cursor-pointer">
                             <input type="radio" name="q5"> <span>а) \(q_1 - q_2 = const\)</span>
                         </label>
@@ -170,9 +174,9 @@
 
                 <!-- Q6 -->
                 <div class="question-card p-6 border-t-4 border-emerald-500">
-                    <span class="badge mb-3 block w-fit">1 бал</span>
-                    <p class="text-sm font-bold text-slate-700 mb-4">Назва негативно зарядженої частинки:</p>
-                    <div class="grid grid-cols-1 gap-2 text-sm">
+                    <div class="mb-3"><span class="badge">1 бал</span></div>
+                    <p class="font-bold text-slate-700 mb-4">Назва негативно зарядженої частинки:</p>
+                    <div class="grid grid-cols-1 gap-2">
                         <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="q6"> <span>а) протон</span></label>
                         <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="q6"> <span>б) електрон</span></label>
                         <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="q6"> <span>в) нейтрон</span></label>
@@ -182,9 +186,9 @@
 
                 <!-- Q7 -->
                 <div class="question-card p-6 border-t-4 border-emerald-500">
-                    <span class="badge mb-3 block w-fit">1 бал</span>
-                    <p class="text-sm font-bold text-slate-700 mb-4">Якого заряду <span class="text-red-600 underline">не можна</span> надати тілу?</p>
-                    <div class="grid grid-cols-2 gap-3 text-sm">
+                    <div class="mb-3"><span class="badge">1 бал</span></div>
+                    <p class="font-bold text-slate-700 mb-4">Якого заряду <span class="text-red-600 underline">не можна</span> надати тілу?</p>
+                    <div class="grid grid-cols-1 gap-3">
                         <label class="flex items-center space-x-2 cursor-pointer font-medium"><input type="radio" name="q7"> <span>а) \(-2,5e\)</span></label>
                         <label class="flex items-center space-x-2 cursor-pointer font-medium"><input type="radio" name="q7"> <span>б) \(-e\)</span></label>
                         <label class="flex items-center space-x-2 cursor-pointer font-medium"><input type="radio" name="q7"> <span>в) \(+e\)</span></label>
@@ -202,7 +206,7 @@
                         <span class="badge">2 бали</span>
                     </div>
                     <p class="text-slate-700 mb-4">Електроскопу надали заряд \(-6,4\) нКл. Скільки надлишкових електронів отримав електроскоп? (\(e = -1,6 \cdot 10^{-19}\) Кл)</p>
-                    <textarea class="w-full p-3 border rounded-lg bg-slate-50 focus:ring-2 focus:ring-rose-200 outline-none" rows="2" placeholder="Розв'язання..."></textarea>
+                    <textarea class="w-full p-4 border rounded-lg bg-slate-50 focus:ring-2 focus:ring-rose-200 outline-none" rows="3" placeholder="Розв'язання..."></textarea>
                 </div>
 
                 <!-- Problem 9 -->
@@ -212,16 +216,16 @@
                         <span class="badge">2 бали</span>
                     </div>
                     <p class="text-slate-700 mb-4 font-medium">З якою силою взаємодіють два точкові заряди 40 нКл і 10 нКл, що знаходяться на відстані 0,06 м один від одного?</p>
-                    <textarea class="w-full p-3 border rounded-lg bg-slate-50 focus:ring-2 focus:ring-amber-200 outline-none" rows="3" placeholder="Розв'язання..."></textarea>
+                    <textarea class="w-full p-4 border rounded-lg bg-slate-50 focus:ring-2 focus:ring-amber-200 outline-none" rows="3" placeholder="Розв'язання..."></textarea>
                 </div>
 
                 <!-- Problem 10 -->
                 <div class="question-card p-8 border-l-8 border-rose-600 bg-rose-50/30">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="font-bold text-xl text-slate-900">Завдання 10</h3>
-                        <span class="bg-rose-600 text-white px-4 py-1 rounded-full text-sm font-black shadow-sm">3 бали</span>
+                        <span class="bg-rose-600 text-white px-4 py-1 rounded-full font-black shadow-sm">3 бали</span>
                     </div>
-                    <p class="text-slate-800 text-lg leading-relaxed mb-6">
+                    <p class="text-slate-800 leading-relaxed mb-6">
                         Дві однакові кульки мають заряди <b>\(-6\) нКл</b> і <b>\(+2\) нКл</b>. Вони доторкнулись і далі їх розвели на відстань <b>20 см</b>. Якою стала сила взаємодії? Вважайте, що \(k = 9 \cdot 10^9 \frac{Н \cdot м^2}{Кл^2}\).
                     </p>
                     <textarea class="w-full mt-2 p-4 border-2 border-dashed border-rose-200 rounded-xl bg-white focus:border-rose-400 outline-none transition-colors" rows="6" placeholder="Розв'язання..."></textarea>
