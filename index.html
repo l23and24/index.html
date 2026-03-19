@@ -3,244 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Самостійна робота №10 - Варіант 3</title>
+    <title>Самостійна робота №10 - Варіант 1</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- MathJax для відображення фізичних формул -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        body { background-color: #f1f5f9; }
-        .question-card { background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.2s; }
-        .question-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .badge { background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; }
-        .drawing-box { border: 1px solid #e2e8f0; border-radius: 8px; background: #fafafa; padding: 15px; overflow: hidden; }
-        img.drawing { max-width: 100%; height: auto; border-radius: 4px; }
+        body { background-color: #f8fafc; font-family: sans-serif; }
+        .question-card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .question-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .badge { background: #eff6ff; color: #1e40af; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+        .drawing-box { border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px; }
+        img.drawing { max-width: 100%; max-height: 180px; object-fit: contain; }
     </style>
 </head>
-<body class="py-10 px-4 md:px-0">
+<body class="py-10 px-4">
     <div class="max-w-4xl mx-auto">
-        <!-- Заголовок -->
+        <!-- Header -->
         <header class="text-center mb-10">
-            <h1 class="text-3xl font-extrabold text-blue-800 mb-2">Самостійна робота № 10</h1>
-            <p class="text-lg text-gray-600 font-medium italic">Тема: «Електричний заряд. Закон збереження електричного заряду. Електричне поле. Механізм електризації. Електроскоп. Закон Кулона»</p>
-            <div class="mt-4 inline-block bg-blue-600 text-white px-6 py-1 rounded-full text-lg font-bold">Варіант 3</div>
+            <h1 class="text-2xl md:text-3xl font-bold text-blue-700 mb-2">Самостійна робота № 10</h1>
+            <p class="text-gray-600 italic mb-4">Тема: «Електричний заряд. Закон збереження електричного заряду. Електричне поле. Механізм електризації. Електроскоп. Закон Кулона»</p>
+            <div class="inline-block bg-blue-600 text-white px-8 py-1.5 rounded-full font-bold shadow-md">1 варіант</div>
         </header>
 
-        <form>
-            <!-- Блок 1-4 (Тестові питання) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <form id="quiz-form" class="space-y-6">
+            
+            <!-- Grid for simple tests -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- Питання 1 -->
+                <!-- Q1 -->
                 <div class="question-card p-6 border-l-4 border-blue-500">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="font-bold text-lg text-gray-800">Завдання 1</span>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-bold text-slate-800">Завдання 1</span>
                         <span class="badge">0,5 бали</span>
                     </div>
-                    <p class="text-gray-700 mb-4">Вкажіть заряд, що виникає на ебонітовій паличці при натиранні її хутром?</p>
-                    <div class="space-y-2">
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q1" class="w-4 h-4 text-blue-600"> <span>а) негативний</span>
+                    <p class="text-slate-700 mb-4 font-medium">Вкажіть заряд, що виникає на скляній паличці при натиранні її шовком?</p>
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-100">
+                            <input type="radio" name="q1" value="a"> <span>а) негативний</span>
                         </label>
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q1" class="w-4 h-4 text-blue-600"> <span>б) точковий</span>
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-100">
+                            <input type="radio" name="q1" value="b"> <span>б) точковий</span>
                         </label>
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q1" class="w-4 h-4 text-blue-600"> <span>в) позитивний</span>
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-100">
+                            <input type="radio" name="q1" value="v"> <span>в) позитивний</span>
                         </label>
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q1" class="w-4 h-4 text-blue-600"> <span>г) елементарний</span>
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-100">
+                            <input type="radio" name="q1" value="g"> <span>г) елементарний</span>
                         </label>
                     </div>
                 </div>
 
-                <!-- Питання 2 -->
+                <!-- Q2 -->
                 <div class="question-card p-6 border-l-4 border-blue-500">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="font-bold text-lg text-gray-800">Завдання 2</span>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-bold text-slate-800">Завдання 2</span>
                         <span class="badge">0,5 бали</span>
                     </div>
-                    <p class="text-gray-700 mb-4">Вкажіть характер взаємодії різнойменних заряджених тіл:</p>
-                    <div class="space-y-2">
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q2" class="w-4 h-4 text-blue-600"> <span>а) не взаємодіють</span>
+                    <p class="text-slate-700 mb-4 font-medium">Вкажіть характер взаємодії однойменних заряджених тіл:</p>
+                    <div class="space-y-1 text-sm">
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer">
+                            <input type="radio" name="q2" value="a"> <span>а) не взаємодіють</span>
                         </label>
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q2" class="w-4 h-4 text-blue-600"> <span>б) притягуються</span>
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer">
+                            <input type="radio" name="q2" value="b"> <span>б) притягуються</span>
                         </label>
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q2" class="w-4 h-4 text-blue-600"> <span>в) відштовхуються</span>
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer">
+                            <input type="radio" name="q2" value="v"> <span>в) відштовхуються</span>
                         </label>
-                        <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                            <input type="radio" name="q2" class="w-4 h-4 text-blue-600"> <span>г) можуть і притягуватися, і відштовхуватися</span>
+                        <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer text-[11px]">
+                            <input type="radio" name="q2" value="g"> <span>г) можуть і притягуватися, і відштовхуватися</span>
                         </label>
                     </div>
                 </div>
 
-                <!-- Питання 3 з Рис. 1 (Зображення draw3.jpeg.html) -->
+                <!-- Q3 (With draw3.jpg) -->
                 <div class="question-card p-6 border-l-4 border-blue-500 md:col-span-2">
                     <div class="flex flex-col md:flex-row gap-6">
                         <div class="flex-1">
-                            <div class="flex justify-between items-start mb-3">
-                                <span class="font-bold text-lg text-gray-800">Завдання 3</span>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="font-bold text-slate-800">Завдання 3</span>
                                 <span class="badge">0,5 бали</span>
                             </div>
-                            <p class="text-gray-700 mb-4">Позитивно заряженою паличкою торкнулися стрижня електроскопа (див. рис. 1). Як став заряджений електроскоп?</p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                                    <input type="radio" name="q3" class="w-4 h-4 text-blue-600"> <span>а) негативно</span>
+                            <p class="text-slate-700 mb-4 font-medium italic">Негативно зарядженою паличкою торкнулися стрижня електроскопа (див. рисунок). Як був заряджений електроскоп?</p>
+                            <div class="space-y-2 text-sm">
+                                <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-slate-100">
+                                    <input type="radio" name="q3" value="a"> <span>а) негативно</span>
                                 </label>
-                                <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                                    <input type="radio" name="q3" class="w-4 h-4 text-blue-600"> <span>б) позитивно</span>
+                                <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-slate-100">
+                                    <input type="radio" name="q3" value="b"> <span>б) позитивно</span>
                                 </label>
-                                <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                                    <input type="radio" name="q3" class="w-4 h-4 text-blue-600"> <span>в) міг бути позитивним, міг і негативним</span>
+                                <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-slate-100">
+                                    <input type="radio" name="q3" value="v"> <span>в) міг бути заряджений позитивно, міг і негативно</span>
                                 </label>
-                                <label class="flex items-center space-x-3 p-2 rounded hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200">
-                                    <input type="radio" name="q3" class="w-4 h-4 text-blue-600"> <span>г) електроскоп не був заряджений</span>
+                                <label class="flex items-center space-x-2 p-2 rounded hover:bg-blue-50 cursor-pointer border border-slate-100">
+                                    <input type="radio" name="q3" value="g"> <span>г) електроскоп не був заряджений</span>
                                 </label>
                             </div>
                         </div>
-                        <div class="drawing-box w-full md:w-64 flex flex-col items-center justify-center">
-                            <span class="text-xs font-bold text-gray-400 mb-2 uppercase">Рис. 1</span>
-                            <img src="draw1.jpeg" alt="Електроскоп" class="drawing" onerror="this.parentElement.innerHTML='<div class=\'text-red-400 text-xs\'>Файл draw1.jpeg не знайдено</div>'">
+                        <div class="drawing-box w-full md:w-80">
+                            <img src="draw3.jpg" alt="Електроскопи" class="drawing" onerror="this.src='https://placehold.co/300x200?text=draw3.jpg+missing'">
+                            <span class="text-[10px] text-gray-400 mt-2 uppercase font-bold tracking-widest">Рисунок до завдання 3</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Питання 4 з Рис. 2 -->
+                <!-- Q4 -->
                 <div class="question-card p-6 border-l-4 border-blue-500 md:col-span-2">
                     <div class="flex flex-col gap-4">
-                        <div class="flex justify-between items-start">
-                            <span class="font-bold text-lg text-gray-800">Завдання 4</span>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-slate-800">Завдання 4</span>
                             <span class="badge">0,5 бали</span>
                         </div>
-                        <p class="text-gray-700">В електричне поле негативно зарядженої кулі вносять негативно заряджену гільзу. В якій точці поля відхилення гільзи буде максимальним? (рис. 2)</p>
+                        <p class="text-slate-700 font-medium">В електричне поле позитивно зарядженої кулі вносять позитивно заряджену гільзу. В якій точці поля відхилення гільзи буде <span class="underline decoration-red-500 font-bold">мінімальним</span>?</p>
                         
-                        <div class="drawing-box w-full py-8 text-center">
-                            <svg viewBox="0 0 500 100" class="w-full h-auto max-w-lg mx-auto">
-                                <circle cx="60" cy="50" r="30" fill="#cbd5e1" stroke="#475569" stroke-width="2" />
-                                <text x="50" y="60" font-size="30" font-weight="bold" fill="#1e293b">−</text>
-                                <line x1="100" y1="50" x2="380" y2="50" stroke="#475569" stroke-dasharray="4" />
-                                <circle cx="140" cy="50" r="4" fill="black" />
-                                <text x="135" y="80" font-weight="bold">А</text>
-                                <circle cx="210" cy="50" r="4" fill="black" />
-                                <text x="205" y="80" font-weight="bold">Б</text>
-                                <circle cx="280" cy="50" r="4" fill="black" />
-                                <text x="275" y="80" font-weight="bold">В</text>
-                                <circle cx="350" cy="50" r="4" fill="black" />
-                                <text x="345" y="80" font-weight="bold">Г</text>
-                                <rect x="420" y="25" width="20" height="50" fill="#94a3b8" stroke="#475569" />
-                                <text x="424" y="55" font-size="20" font-weight="bold" fill="#1e293b">−</text>
-                                <line x1="430" y1="0" x2="430" y2="25" stroke="black" />
+                        <div class="drawing-box py-10">
+                             <svg viewBox="0 0 500 120" class="w-full max-w-lg">
+                                <circle cx="60" cy="60" r="35" fill="#fef2f2" stroke="#ef4444" stroke-width="2" />
+                                <text x="48" y="75" font-size="45" font-weight="bold" fill="#ef4444">+</text>
+                                <line x1="100" y1="60" x2="400" y2="60" stroke="#94a3b8" stroke-dasharray="4" />
+                                <circle cx="150" cy="60" r="5" fill="#1e293b" /> <text x="145" y="90" class="font-bold">А</text>
+                                <circle cx="230" cy="60" r="5" fill="#1e293b" /> <text x="225" y="90" class="font-bold">Б</text>
+                                <circle cx="310" cy="60" r="5" fill="#1e293b" /> <text x="305" y="90" class="font-bold">В</text>
+                                <circle cx="390" cy="60" r="5" fill="#1e293b" /> <text x="385" y="90" class="font-bold">Г</text>
+                                <rect x="440" y="30" width="25" height="60" fill="#f8fafc" stroke="#475569" stroke-width="2" />
+                                <text x="445" y="68" font-size="25" font-weight="bold" fill="#475569">+</text>
+                                <line x1="452" y1="0" x2="452" y2="30" stroke="#000" />
                             </svg>
-                            <div class="text-center text-xs font-bold text-gray-400 mt-2 uppercase">Рис. 2</div>
                         </div>
 
-                        <div class="grid grid-cols-4 gap-4">
-                            <label class="text-center p-3 rounded border border-gray-200 hover:bg-blue-50 cursor-pointer">
-                                <input type="radio" name="q4" class="mr-2"> <b>а) А</b>
+                        <div class="grid grid-cols-4 gap-4 text-center">
+                            <label class="p-3 border rounded-lg hover:bg-blue-50 cursor-pointer font-bold">
+                                <input type="radio" name="q4" value="a"> а) А
                             </label>
-                            <label class="text-center p-3 rounded border border-gray-200 hover:bg-blue-50 cursor-pointer">
-                                <input type="radio" name="q4" class="mr-2"> <b>б) Б</b>
+                            <label class="p-3 border rounded-lg hover:bg-blue-50 cursor-pointer font-bold">
+                                <input type="radio" name="q4" value="b"> б) Б
                             </label>
-                            <label class="text-center p-3 rounded border border-gray-200 hover:bg-blue-50 cursor-pointer">
-                                <input type="radio" name="q4" class="mr-2"> <b>в) В</b>
+                            <label class="p-3 border rounded-lg hover:bg-blue-50 cursor-pointer font-bold">
+                                <input type="radio" name="q4" value="v"> в) В
                             </label>
-                            <label class="text-center p-3 rounded border border-gray-200 hover:bg-blue-50 cursor-pointer">
-                                <input type="radio" name="q4" class="mr-2"> <b>г) Г</b>
+                            <label class="p-3 border rounded-lg hover:bg-blue-50 cursor-pointer font-bold">
+                                <input type="radio" name="q4" value="g"> г) Г
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Блок 5-7 (Визначення) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <!-- Питання 5 -->
-                <div class="question-card p-6 border-t-4 border-green-500">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="font-bold text-lg text-gray-800">Завдання 5</span>
-                        <span class="badge">1 бал</span>
-                    </div>
-                    <p class="text-gray-700 mb-4">Вкажіть вираз, що є записом закону Кулона:</p>
-                    <div class="text-sm space-y-2">
-                        <label class="block p-2 hover:bg-green-50 rounded">
-                            <input type="radio" name="q5"> \(F = k \frac{|q_1||q_2|}{r^2}\)
+            <!-- Law and Particle (5-7) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Q5 -->
+                <div class="question-card p-6 border-t-4 border-emerald-500">
+                    <span class="badge mb-3 block w-fit">1 бал</span>
+                    <p class="text-sm font-bold text-slate-700 mb-4">Вкажіть запис закону збереження заряду:</p>
+                    <div class="space-y-3 text-[13px]">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5"> <span>а) \(q_1 - q_2 = const\)</span>
                         </label>
-                        <label class="block p-2 hover:bg-green-50 rounded">
-                            <input type="radio" name="q5"> \(q_1 + q_2 + \dots = \text{const}\)
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5"> <span>б) \(q_1 - q_2 - \dots - q_n = const\)</span>
                         </label>
-                        <label class="block p-2 hover:bg-green-50 rounded">
-                            <input type="radio" name="q5"> \(E = \frac{F}{q}\)
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5"> <span>г) \(q_1 + q_2 + \dots + q_n = const\)</span>
                         </label>
                     </div>
                 </div>
 
-                <!-- Питання 6 -->
-                <div class="question-card p-6 border-t-4 border-green-500">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="font-bold text-lg text-gray-800">Завдання 6</span>
-                        <span class="badge">1 бал</span>
-                    </div>
-                    <p class="text-gray-700 mb-4">Вкажіть назву позитивно зарядженої частинки ядра:</p>
-                    <div class="space-y-2">
-                        <label class="block p-2 hover:bg-green-50 rounded"><input type="radio" name="q6"> а) протон</label>
-                        <label class="block p-2 hover:bg-green-50 rounded"><input type="radio" name="q6"> б) електрон</label>
-                        <label class="block p-2 hover:bg-green-50 rounded"><input type="radio" name="q6"> в) нейтрон</label>
+                <!-- Q6 -->
+                <div class="question-card p-6 border-t-4 border-emerald-500">
+                    <span class="badge mb-3 block w-fit">1 бал</span>
+                    <p class="text-sm font-bold text-slate-700 mb-4">Назва негативно зарядженої частинки:</p>
+                    <div class="grid grid-cols-1 gap-2 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="q6"> <span>а) протон</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="q6"> <span>б) електрон</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="q6"> <span>в) нейтрон</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="q6"> <span>г) фотон</span></label>
                     </div>
                 </div>
 
-                <!-- Питання 7 -->
-                <div class="question-card p-6 border-t-4 border-green-500">
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="font-bold text-lg text-gray-800">Завдання 7</span>
-                        <span class="badge">1 бал</span>
-                    </div>
-                    <p class="text-gray-700 mb-4">Якого заряду не можна надати тілу?</p>
-                    <div class="space-y-2">
-                        <label class="block p-2 hover:bg-green-50 rounded"><input type="radio" name="q7"> а) \(-2,5e\)</label>
-                        <label class="block p-2 hover:bg-green-50 rounded"><input type="radio" name="q7"> б) \(-e\)</label>
-                        <label class="block p-2 hover:bg-green-50 rounded"><input type="radio" name="q7"> в) \(+e\)</label>
+                <!-- Q7 -->
+                <div class="question-card p-6 border-t-4 border-emerald-500">
+                    <span class="badge mb-3 block w-fit">1 бал</span>
+                    <p class="text-sm font-bold text-slate-700 mb-4">Якого заряду <span class="text-red-600 underline">не можна</span> надати тілу?</p>
+                    <div class="grid grid-cols-2 gap-3 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer font-medium"><input type="radio" name="q7"> <span>а) \(-2,5e\)</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer font-medium"><input type="radio" name="q7"> <span>б) \(-e\)</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer font-medium"><input type="radio" name="q7"> <span>в) \(+e\)</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer font-medium"><input type="radio" name="q7"> <span>г) \(-100e\)</span></label>
                     </div>
                 </div>
             </div>
 
-            <!-- Блок 8-10 (Задачі) -->
+            <!-- Problems Section (8-10) -->
             <div class="space-y-6">
-                <div class="question-card p-6 border-l-4 border-red-500">
+                <!-- Problem 8 -->
+                <div class="question-card p-6 border-l-8 border-rose-400">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="font-bold text-lg text-gray-800">Завдання 8 <span class="text-sm font-normal text-gray-500">(2 бали)</span></span>
+                        <h3 class="font-bold text-slate-800">Завдання 8</h3>
+                        <span class="bg-rose-50 text-rose-700 px-3 py-1 rounded-full text-xs font-bold">2 бали</span>
                     </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        Електроскопу надали позитивний заряд, що дорівнює <b>\(+3,2\) нКл</b>. Скільки електронів «втратив» електроскоп? Заряд електрона \(e = -1,6 \cdot 10^{-19}\) Кл.
-                    </p>
-                    <textarea class="w-full mt-4 p-3 border rounded-lg focus:ring-2 focus:ring-red-200 outline-none" rows="2" placeholder="Ваш розв'язок..."></textarea>
+                    <p class="text-slate-700 mb-4">Електроскопу надали заряд \(-6,4\) нКл. Скільки надлишкових електронів отримав електроскоп? (\(e = -1,6 \cdot 10^{-19}\) Кл)</p>
+                    <textarea class="w-full p-3 border rounded-lg bg-slate-50 focus:ring-2 focus:ring-rose-200 outline-none" rows="2" placeholder="Розв'язок (N = q / e)..."></textarea>
                 </div>
 
-                <div class="question-card p-6 border-l-4 border-red-500">
+                <!-- Problem 10 -->
+                <div class="question-card p-8 border-l-8 border-rose-600 bg-rose-50/30">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="font-bold text-lg text-gray-800">Завдання 9 <span class="text-sm font-normal text-gray-500">(2 бали)</span></span>
+                        <h3 class="font-bold text-xl text-slate-900">Завдання 10</h3>
+                        <span class="bg-rose-600 text-white px-4 py-1 rounded-full text-sm font-black shadow-sm">3 бали</span>
                     </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        Два точкові заряди <b>\(+4\) нКл</b> і <b>\(-20\) нКл</b> знаходяться на відстані <b>2 см</b>. Визначте силу взаємодії.
+                    <p class="text-slate-800 text-lg leading-relaxed mb-6">
+                        Дві однакові кульки мають заряди <b>\(-6\) нКл</b> і <b>\(+2\) нКл</b>. Вони доторкнулись і далі їх розвели на відстань <b>20 см</b>. Якою стала сила взаємодії? Вважайте, що \(k = 9 \cdot 10^9 \frac{Н \cdot м^2}{Кл^2}\).
                     </p>
-                    <textarea class="w-full mt-4 p-3 border rounded-lg focus:ring-2 focus:ring-red-200 outline-none" rows="2" placeholder="Ваш розв'язок..."></textarea>
-                </div>
-
-                <div class="question-card p-6 border-l-4 border-red-500">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="font-bold text-lg text-gray-800">Завдання 10 <span class="text-sm font-normal text-gray-500">(3 бали)</span></span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 border rounded-xl shadow-inner">
+                            <p class="text-[10px] font-black uppercase text-slate-400 mb-2">Дано:</p>
+                            <p class="text-sm italic">\(q_1 = -6 \cdot 10^{-9}\) Кл<br>\(q_2 = 2 \cdot 10^{-9}\) Кл<br>\(r = 0,2\) м</p>
+                        </div>
+                        <div class="bg-white p-4 border rounded-xl shadow-inner flex flex-col justify-center">
+                            <p class="text-[10px] font-black uppercase text-slate-400 mb-2">Знайти:</p>
+                            <p class="text-lg font-bold">\(F = ?\)</p>
+                        </div>
                     </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        Дві однакові металеві кульки мають заряди <b>\(+8\) нКл</b> і <b>\(-2\) нКл</b>. Вони доторкнулися і їх розвели на відстань <b>30 см</b>. Якою стала сила взаємодії?
-                    </p>
-                    <textarea class="w-full mt-4 p-3 border rounded-lg focus:ring-2 focus:ring-red-200 outline-none" rows="3" placeholder="Ваш розв'язок..."></textarea>
+                    <textarea class="w-full mt-6 p-4 border-2 border-dashed border-rose-200 rounded-xl bg-white focus:border-rose-400 outline-none transition-colors" rows="4" placeholder="Напишіть хід розв'язання тут..."></textarea>
                 </div>
             </div>
         </form>
 
-        <footer class="mt-12 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-          Перездача.
+        <footer class="mt-12 py-8 text-center text-slate-400 text-xs border-t border-slate-200">
+            <p class="font-bold tracking-widest uppercase">Фізика 8 клас • Самостійна робота</p>
         </footer>
     </div>
 </body>
